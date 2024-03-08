@@ -3,7 +3,7 @@ let shapeX;
 let shapeY;
 let showNewEnvironment = false;
 let clicked = false; 
-let shapeSpeed = 20;
+let shapeSpeed = 10;
 let isCircle = true; 
 
 
