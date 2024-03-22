@@ -11,7 +11,7 @@ let rocks = [];
 
 function setup() {
   createCanvas(800, 500);
-  let cnv= createCanvas (800,500)
+  let cvn= createCanvas (800,500)
   cvn.parent ("p5-canvas-container")
   textStyle(BOLD);
   textSize(16);
