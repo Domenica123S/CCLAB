@@ -1,4 +1,4 @@
-let NUM_OF_PARTICLES = 100; // Change the number of particles to 100.
+let NUM_OF_PARTICLES = 100; 
 let particles = [];
 
 function setup() {
@@ -7,6 +7,8 @@ function setup() {
 
 function draw() {
   background(135, 206, 235);
+  
+  console.log(mouseX,mouseY)
   //sun
   fill(241,194,50)
   circle(590,20,160)
@@ -16,18 +18,34 @@ function draw() {
   circle(375,90,50)
   circle(420,90,50)
 
+  circle(350,80,30)
+  circle(370,75,30)
+  
+
   // Draw branches
   strokeWeight(30);
   stroke(60, 38, 16);
   line(0, 100, 307, 160);
+
+  line(600,200,418,240);
+  
   strokeWeight(20);
   line(83, 109, 210, 33);
   line(125, 128, 211, 191);
+  line(546,203,484,137);
+  line(523,231,478,306)
+
+
   strokeWeight(15);
   line(122, 78, 91, 34);
   line(160, 73, 230, 88);
   line(155, 57, 149, 10);
   line(181, 177, 169, 204);
+  
+  line(504,143,522,116);
+  line(509,180,473,178);
+  line(508,276,526,304);
+  line(482, 285,438,294);
 
   let flowerPositions = [
     { x: 50, y: 120 },
@@ -38,7 +56,14 @@ function draw() {
     { x: 309, y: 140 },
     { x: 180, y: 200 },
     { x: 95, y: 63 },
-    { x: 106, y: 30 }
+    { x: 106, y: 30 },
+    {x:513, y:182},
+    {x:499, y:142},
+    {x:423,y:227},
+    {x:452, y:286},
+    {x:523, y:287},
+    {x:573,y:220}
+    
   ];
 
   for (let i = 0; i < flowerPositions.length; i++) {
@@ -54,11 +79,16 @@ function draw() {
     p.display();
   }
 
-  // Add new particles at every frame
-  let startX = random(width); // Start particles at random x position
-  let startY = random(100, height); // Start particles below the branches
+  
+  let startX = random(width); 
+  let startY = random(100, height); 
   let newParticle = new Particle(startX, startY);
   particles.push(newParticle);
+
+  if (particles.length > NUM_OF_PARTICLES) {
+   
+    particles.splice(0, particles.length - NUM_OF_PARTICLES);
+}
 }
 
 class Flower {
@@ -95,7 +125,7 @@ class Particle {
   }
 
   update() {
-    this.y += 2; // Move particles downwards
+    this.y += 1; // Move particles downwards
   }
 
   display() {
