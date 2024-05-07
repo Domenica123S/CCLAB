@@ -1,0 +1,36 @@
+body {
+  font-family: copperplate, papyrus, fantasy;
+  background-color: rgb(138, 229, 255);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  float: right;
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.image-container img {
+  width: 300px; /* Adjust the width as needed */
+  height: auto;
+}
+
+#project-description,
+#future-message,
+#p5-canvas-container,
+#additional-images {
+  clear: both;
+}
+
+#additional-images {
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+#p5-canvas-container {
+  margin: 0 auto; /* Center the canvas horizontally */
+}
+
+
