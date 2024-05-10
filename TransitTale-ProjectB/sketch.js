@@ -1,3 +1,4 @@
+let customFont;
 
 let isInRoom = false;
 let pearl;
@@ -41,12 +42,14 @@ function preload() {
   taxiImg = loadImage('taxi.png'); 
   street= loadImage("street.webp");
   zoom= loadImage("zoom.jpg")
-  bundImg= loadImage("bund.JPEG")
+  bundImg= loadImage("bund.JPEG");
+  customFont= loadFont ('antonio/Antonio-Light.ttf')
 }
 
 function setup() {
   let canvas = createCanvas(600, 600);
   canvas.parent("p5-canvas-container");
+  textFont(customFont)
   minDistanceBetweenClouds = width / 3;
   resetGame();
   liberty = new Liberty(statue,boat);
@@ -86,19 +89,19 @@ function keyPressed() {
     if (!hasGameBegun) {
       hasGameBegun = true;
       mapNYC= true;
-      airplane = new Airplane(100); // Start the airplane at a fixed x position
+      airplane = new Airplane(100); 
     }
   }
-  if (key === "s" || key ==="S") { // Check if the "s" key is pressed
+  if (key === "s" || key ==="S") { 
     if (hasGameBegun && mapNYC) {
-        // Transition to the fish environment
+     
         mapNYC = false;
     }
 }
-// Add key control to transition to the sixth environment from the fish environment
+
 if (key === "f" || key === "F") {
     if (mapNYC) {
-        // Transition to the sixth environment
+        
         mapNYC=false
         mapSH = true;
     }
