@@ -11,28 +11,31 @@
   <!-- <script src="lib/p5.sound.js"></script> -->
 </head>
 <style> 
-body{
-    font-family: copperplate,papyrus,fantasy;
-    background-color:rgb(138,229,255);
-  }
+
 </style>
 
 <body>
   <header>
     <h1>🎫✈️ TRANSIT TALE 🎫✈️</h1>
+  </header>
+
+  <main>
+    <div id="project-description">
+      <h3>💻⚙️Project Description:💻⚙️</h3>
+      <p>Welcome to Transit Tale! This project is an exploration of the bustling cities of New York and Shanghai through the lens of an international student at an American Univeristy. Dive into the vibrant streets and diverse cultures of these two iconic metropolises. Experience the rhythm of urban life, from the iconic landmarks of New York to the pictures of the futuristic skyline of Shanghai. Click on the buttons below to explore photo albums capturing the essence of each city. Let's embark on a journey through Transit Tale!</p>
+    </div>
+    <div id="p5-canvas-container"></div>
+
     <nav>
       <ul>
         <li><a href="#new-york">New York</a></li>
         <li><a href="#shanghai">Shanghai</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main>
     <section id="new-york">
       <h2>🗽 New York 🗽</h2>
       <div class="image-container">
-        <img src="newyorkcamer.jpg" alt="New York City">
+        <img src="newyorkcamer.png" alt="New York City">
       </div>
       <a href="albumnewyork.html" class="button">Go to Album NYC</a>
     </section>
@@ -44,11 +47,7 @@ body{
       </div>
       <a href="albumshanghai.html" class="button">Go to Album SH</a>
     </section>
-
-    <div id="project-description">
-      <h3>💻⚙️Project Description:💻⚙️</h3>
-      <p>Welcome to Transit Tale! This project is an exploration of the bustling cities of New York and Shanghai through the lens of an international student at an American Univeristy. Dive into the vibrant streets and diverse cultures of these two iconic metropolises. Experience the rhythm of urban life, from the iconic landmarks of New York to the pictures of the futuristic skyline of Shanghai. Click on the buttons above to explore photo albums capturing the essence of each city. Let's embark on a journey through Transit Tale!</p>
-    </div>
+    
 
     <div id="future-message">
       <h3>🔮Message to Future Generations:🔮</h3>
@@ -56,8 +55,6 @@ body{
       <p>As you explore this project, we hope it offers you a glimpse into the vibrant cities of our time. May it serve as a reminder of the importance of preserving our urban landscapes, embracing cultural diversity, and fostering sustainable transit systems. Let the stories captured here inspire you to create a brighter, more connected world for generations to come.</p>
       <p>Sincerely,</p>
       <p>Transit Tale Creator</p>
-    </div>
-    <div id="p5-canvas-container">
       <script src="sketch.js"></script>
       </div>
     
